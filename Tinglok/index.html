@@ -1,0 +1,1317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/JS/jquery.min.js"></script>
+    <link
+      rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="/bootstrap-5.2.3-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="/Project/style.css">
+    <link rel="icon" href="/Project/Image/tinglok_logo.jpg">
+    <title>Tinglok.com</title>
+    <style>
+        .swiper {
+            width: 100%;
+            height: 405px;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="popup">
+        <!-- register -->
+        <div class="box register-form">
+            <div class="top"><i class="fa-solid fa-xmark mark-close"></i>
+                <h1>Register to post free Ads</h1>
+            </div>
+            <div class="body">
+                <form action="">
+                    <label for="userem">User Email <i class="text-danger">*</i></label><br>
+                    <input type="email" name="" id="userem" placeholder="Email"><br>
+                    <label for="password">User Password <i class="text-danger">*</i></label><br>
+                    <input type="password" name="" id="password" placeholder="Password"><br>
+                    <label for="cpassword">User Confirm Password <i class="text-danger">*</i></label><br>
+                    <input type="password" name="" id="cpassword" placeholder="Confirm Password"><br>
+                    <a class="mt-1 submit">Submit</a>
+                </form>
+                <p class="or"><span class="orr">Or</span></p>
+                <span class="rface">Register by using your Facebook account</span><br>
+                <a href="#" class="faceb"><i class="fa-brands fa-facebook-f" style="color: white;"></i> acebook</a>
+                <span class="already pb-1">Already have an account?</span>
+                <a href="#" class="facel">Login</a>
+            </div>
+        </div>
+        <!-- login -->
+        <div class="box login-form" id="login-form">
+            <div class="top"><i class="fa-solid fa-xmark mark-close"></i>
+                <h1>Login to manage Ads or post free Ads</h1>
+            </div>
+            <div class="body">
+                <form action="">
+                    <label for="userem">Email <i class="text-danger">*</i></label><br>
+                    <input type="email" name="" id="userem" placeholder="Email"><br>
+                    <label for="password">Password <i class="text-danger">*</i></label><br>
+                    <input type="password" name="" id="password" placeholder="Password"><br>
+                    <a href="#" class="forgot-pass">Forgot Password?</a>
+                    <a class="mt-1 submit">Login</a>
+                </form>
+                <p class="or"><span class="orr">Or</span></p>
+                <span class="rface">Login by using your Facebook account</span><br>
+                <a href="#" class="faceb"><i class="fa-brands fa-facebook-f" style="color: white;"></i> acebook</a>
+                <span class="already pb-1">No account yet?</span>
+                <a href="#" class="facel facec">Create An Account</a>
+            </div>
+        </div>
+    </div>
+    <div class="popup-menu">
+        <div class="slide-bar">
+            <div class="categories"><a href="#">CATEGORIES</a></div>
+            <ul></ul>
+        </div>
+    </div>
+    <div class="container-fluid fly-bar">
+        <a class="wee register-fly">Register</a>
+        <a class="wee login-fly">Login</a>
+    </div>
+    <div class="container-fliid bg-body mb-1 pt-1 pb-2 position-sticky top-0"
+        style="border-bottom: 0.1px solid rgba(50, 50, 50, 0.101); z-index: 999;">
+        <div class="more-bar"><i class="fa-solid fa-bars"></i></div>
+        <div class="container p-2">
+            <div class="row d-flex justify-content-between">
+                <!-- menu -->
+                <div class="col-1 p-0 ms-3 col-lg-1 col-md-12 col-xl-1 col-sm-12 col-12 col-img">
+                    <img src="/Project/Image/tinglok_logo.jpg" alt="image" class="logo-img">
+                </div>
+                <div class="col-9 me-3 col-sm-12 col-12 col-lg-8 col-xl-9">
+                    <div class="row d-flex justify-content-between">
+                        <div class="col-8 pb-1 col-md-12 col-lg-8 col-xl-8 col-sm-12 col-12">
+                            <div class="row nar-bar">
+                                <div class="col-12 p-0 d-flex">
+                                    <select name="" id="" class="p-2 d-block bg-body"
+                                        style="font-size: 12px; outline: 0;border: 0.3px solid rgba(128, 128, 128, 0.145); border-bottom-left-radius: 4px; border-top-left-radius: 4px;">
+                                        <option> --- All Categories --- </option>
+                                        <option> House & Land </option>
+                                        <option> Car & Vehicle </option>
+                                        <option> Phone & Tablet </option>
+                                        <option> Computer & Accessories </option>
+                                        <option> Fashion & Beauty </option>
+                                        <option> Book & Stationery </option>
+                                        <option> Food & Beverage </option>
+                                        <option> Hotel & Transport </option>
+                                        <option> Education & Sport </option>
+                                        <option> Furniture & Decor </option>
+                                        <option> Professional Services </option>
+                                        <option> Health & Medicine </option>
+                                        <option> Construction Materials </option>
+                                        <option> Electronics & Appliances </option>
+                                    </select>
+                                    <input type="text" name="" id="" placeholder="What are you looking for?"
+                                        class="w-75 p-1 ps-2 bg-body"
+                                        style="outline: 0; border: 0.3px solid rgba(128, 128, 128, 0.145); font-size: 12px;">
+                                    <a href="#"
+                                        class="d-flex justify-content-center align-items-center bg-success ps-3 pe-3 text-decoration-none"
+                                        style="border: 0.3px solid rgba(128, 128, 128, 0.145); border-bottom-right-radius: 2px; border-top-right-radius: 2px;"><i
+                                            class="fas fa-search ps-1 pe-1 search" style="font-size: 12px;"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4 p-0 pb-1 ps-3 box-form">
+                            <a class="w-50 mx-1 pt-2 pb-2 text-light text-decoration-none d-flex justify-content-center align-items-center register"
+                                style="border-radius: 4px;">Register</a>
+                            <a class="w-50 mx-1 pt-2 pb-2 text-light text-decoration-none d-flex justify-content-center align-items-center login"
+                                style="border-radius: 4px;">Login</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-3 menu-box">
+                <div class="row">
+                    <div class="col-12 d-flex justify-content-between text-success ps-3 pe-3 pt-1 pb-1 cate-box">
+                        <a href="#" class="pt-2 pb-2 text-decoration-none text-success cate"
+                            style="font-size: 14px; font-weight: bold;">CATEGORIES</a>
+                        <a href="#" class="text-decoration-none pt-2 pb-2 see-all"
+                            style="font-size: 11px; font-weight: bold;">See All</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 pe-2 ps-2 pt-2 mt-1">
+                        <ul class="nav" style="width: 269px; height: 347.88px;">
+                            <li
+                                class="nav-item d-flex justify-content-between align-items-center w-100 pt-1 pb-1 pe-2 menu">
+                                <a href="#" class="nav-link title" style="font-size: 13px;"><ion-icon
+                                        name="home-outline" class="text-success pe-2"></ion-icon> House & Lane</a>
+                                <a href="#"><i class="fa-solid fa-chevron-right right" style="font-size: 9px;"></i></a>
+                                <div class="more-list p-3">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <a href="#" class="text-decoration-none a-list">House for Sale</a>
+                                            <a href="#" class="text-decoration-none a-list">Condo For Rent</a>
+                                            <a href="#" class="text-decoration-none a-list">Commercial Property For
+                                                Rent</a>
+                                            <a href="#" class="text-decoration-none a-list">Land For Sale</a>
+                                        </div>
+                                        <div class="col-4">
+                                            <a href="#" class="text-decoration-none a-list">House For Rent</a>
+                                            <a href="#" class="text-decoration-none a-list">Apartment For Sale</a>
+                                            <a href="#" class="text-decoration-none a-list">Commercial Property For
+                                                Sale</a>
+                                            <a href="#" class="text-decoration-none a-list">Land For Rent</a>
+                                        </div>
+                                        <div class="col-4">
+                                            <a href="#" class="text-decoration-none a-list">Condo For Ssle</a>
+                                            <a href="#" class="text-decoration-none a-list">Apartment For Rent</a>
+                                            <a href="#" class="text-decoration-none a-list">Room For Rent</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li
+                                class="nav-item d-flex justify-content-between align-items-center pt-1 pb-1 w-100 pe-2 menu">
+                                <a href="#" class="nav-link title" style="font-size: 13px;"><ion-icon
+                                        name="car-sport-outline" class="text-success pe-2"></ion-icon> Car & Vehicle</a>
+                                <a href="#"><i class="fa-solid fa-chevron-right right" style="font-size: 9px;"></i></a>
+                                <div class="more-list p-3">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <a href="#" class="text-decoration-none a-list">Car for Sale</a>
+                                            <a href="#" class="text-decoration-none a-list">Motorcyle For Sale</a>
+                                            <a href="#" class="text-decoration-none a-list">maintenance & Repair</a>
+                                            <a href="#" class="text-decoration-none a-list">Bicycle For Rent</a>
+                                        </div>
+                                        <div class="col-4">
+                                            <a href="#" class="text-decoration-none a-list">Car For Rent</a>
+                                            <a href="#" class="text-decoration-none a-list">Vehicle For Rent</a>
+                                            <a href="#" class="text-decoration-none a-list">Part & Accessories</a>
+                                            <a href="#" class="text-decoration-none a-list">Tok Tok & Rermok For
+                                                Rent</a>
+                                        </div>
+                                        <div class="col-4">
+                                            <a href="#" class="text-decoration-none a-list">Bicycle For Sale</a>
+                                            <a href="#" class="text-decoration-none a-list">Tok Tok & Rermok For
+                                                Sale</a>
+                                            <a href="#" class="text-decoration-none a-list">Other</a>
+                                            <a href="#" class="text-decoration-none a-list">Motorcycle For Rent</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li
+                                class="nav-item d-flex justify-content-between align-items-center pt-1 pb-1 w-100 pe-2 menu">
+                                <a href="#" class="nav-link title" style="font-size: 13px;"><ion-icon
+                                        name="phone-portrait-outline" class="text-success pe-2"></ion-icon> Phone &
+                                    Tablet</a>
+                                <a href="#"><i class="fa-solid fa-chevron-right right" style="font-size: 9px;"></i></a>
+                                <div class="more-list p-3">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <a href="#" class="text-decoration-none a-list">Phone</a>
+                                            <a href="#" class="text-decoration-none a-list">Accessories</a>
+                                        </div>
+                                        <div class="col-4">
+                                            <a href="#" class="text-decoration-none a-list">Tablet</a>
+                                            <a href="#" class="text-decoration-none a-list">Phone Number</a>
+                                        </div>
+                                        <div class="col-4">
+                                            <a href="#" class="text-decoration-none a-list">Smart Watch</a>
+                                            <a href="#" class="text-decoration-none a-list">Other</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li
+                                class="nav-item d-flex justify-content-between align-items-center pt-1 pb-1 w-100 pe-2 menu">
+                                <a href="#" class="nav-link title" style="font-size: 13px;"><ion-icon
+                                        name="laptop-outline" class="text-success pe-2"></ion-icon> Computer &
+                                    Accesseries</a>
+                                <a href="#"><i class="fa-solid fa-chevron-right right" style="font-size: 9px;"></i></a>
+                                <div class="more-list p-3">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <a href="#" class="text-decoration-none a-list">Laptop</a>
+                                            <a href="#" class="text-decoration-none a-list">Monitor</a>
+                                            <a href="#" class="text-decoration-none a-list">Software</a>
+                                        </div>
+                                        <div class="col-4">
+                                            <a href="#" class="text-decoration-none a-list">Desktop</a>
+                                            <a href="#" class="text-decoration-none a-list">Printers & Scanners</a>
+                                            <a href="#" class="text-decoration-none a-list">Other</a>
+                                        </div>
+                                        <div class="col-4">
+                                            <a href="#" class="text-decoration-none a-list">All In One</a>
+                                            <a href="#" class="text-decoration-none a-list">Part & Accesseries</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li
+                                class="nav-item d-flex justify-content-between align-items-center pt-1 pb-1 w-100 pe-2 menu">
+                                <a href="#" class="nav-link title" style="font-size: 13px;"><ion-icon
+                                        name="shirt-outline" class="text-success pe-2"></ion-icon> Fashiont & Beauty</a>
+                                <a href="#"><i class="fa-solid fa-chevron-right right" style="font-size: 9px;"></i></a>
+                                <div class="more-list p-3">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <a href="#" class="text-decoration-none a-list">Women's Fashion</a>
+                                            <a href="#" class="text-decoration-none a-list">Bag and Lugage</a>
+                                            <a href="#" class="text-decoration-none a-list">Other</a>
+                                        </div>
+                                        <div class="col-4">
+                                            <a href="#" class="text-decoration-none a-list">Man's Fashion</a>
+                                            <a href="#" class="text-decoration-none a-list">Fashion Accessories</a>
+                                        </div>
+                                        <div class="col-4">
+                                            <a href="#" class="text-decoration-none a-list">Baby & Kids</a>
+                                            <a href="#" class="text-decoration-none a-list">Beaty & healthcare</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li
+                                class="nav-item d-flex justify-content-between align-items-center pt-1 pb-1 w-100 pe-2 menu">
+                                <a href="#" class="nav-link title" style="font-size: 13px;"><ion-icon
+                                        name="book-outline" class="text-success pe-2"></ion-icon> Book & stationery</a>
+                                <a href="#"><i class="fa-solid fa-chevron-right right" style="font-size: 9px;"></i></a>
+                                <div class="more-list p-3">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <a href="#" class="text-decoration-none a-list">Book</a>
+                                        </div>
+                                        <div class="col-4">
+                                            <a href="#" class="text-decoration-none a-list">Stationery</a>
+                                        </div>
+                                        <div class="col-4">
+                                            <a href="#" class="text-decoration-none a-list">Other</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li
+                                class="nav-item d-flex justify-content-between align-items-center pt-1 pb-1 w-100 pe-2 menu">
+                                <a href="#" class="nav-link title" style="font-size: 13px;"><ion-icon
+                                        name="fast-food-outline" class="text-success pe-2"></ion-icon> Food &
+                                    Beverage</a>
+                                <a href="#"><i class="fa-solid fa-chevron-right right" style="font-size: 9px;"></i></a>
+                                <div class="more-list p-3">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <a href="#" class="text-decoration-none a-list">Meat</a>
+                                            <a href="#" class="text-decoration-none a-list">Vigetable</a>
+                                            <a href="#" class="text-decoration-none a-list">Bread & Bakery</a>
+                                            <a href="#" class="text-decoration-none a-list">Other</a>
+                                        </div>
+                                        <div class="col-4">
+                                            <a href="#" class="text-decoration-none a-list">Seafood</a>
+                                            <a href="#" class="text-decoration-none a-list">Beverage</a>
+                                            <a href="#" class="text-decoration-none a-list">Beer & Wine</a>
+                                        </div>
+                                        <div class="col-4">
+                                            <a href="#" class="text-decoration-none a-list">Fruit</a>
+                                            <a href="#" class="text-decoration-none a-list">Grocery</a>
+                                            <a href="#" class="text-decoration-none a-list">Rice & Cereal</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li
+                                class="nav-item d-flex justify-content-between align-items-center pt-1 pb-1 w-100 pe-2 menu">
+                                <a href="#" class="pt-2 pb-2 ps-3 text-decoration-none text-success"
+                                    style="font-size: 13px; font-weight: bold;">ALL CATEGORIES</a>
+                                <a href="#" class="text-success text-decoration-none"><i
+                                        class="fa-solid fa-chevron-down" style="font-size: 9px;"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- slider -->
+            <div class="col-9 pe-2 ps-2 col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="/Project/Image/slider.jpg" alt="image"></div>
+                        <div class="swiper-slide"><img src="/Project/Image/slider.jpg" alt="image"></div>
+                        <div class="swiper-slide"><img src="/Project/Image/slider.jpg" alt="image"></div>
+                        <div class="swiper-slide"><img src="/Project/Image/slider.jpg" alt="image"></div>
+                        <div class="swiper-slide"><img src="/Project/Image/slider.jpg" alt="image"></div>
+                        <div class="swiper-slide"><img src="/Project/Image/slider.jpg" alt="image"></div>
+                        <div class="swiper-slide"><img src="/Project/Image/slider.jpg" alt="image"></div>
+                        <div class="swiper-slide"><img src="/Project/Image/slider.jpg" alt="image"></div>
+                        <div class="swiper-slide"><img src="/Project/Image/slider.jpg" alt="image"></div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div>
+        </div>
+        <!-- step 1-->
+        <div class="row pe-0">
+            <div class="col-12 mt-3 p-0 pt-1 d-flex justify-content-between col-md-12 sponsor">
+                <h1 class="txt">SPONSORED ADS</h1>
+            </div>
+        </div>
+        <div class="row pe-0">
+            <div class="col-3 p-0 mt-2 col-xl-3 col-md-6 col-lg-3 col-6 col-sm-6">
+                <div class="card item" style="border-radius: 0;">
+                    <div class="card-img-top img-fluid img" style="background-image: url(/Project/Image/1-1.jpg);">
+                    </div>
+                    <div class="card-body pb-1 ps-2 pe-2">
+                        <div class="card-title" style="font-size: 11px;">សាក់កាដូរថ្មី...</div>
+                        <div class="card-text text-danger d-flex justify-content-end mt-4 pt-4 price">$0.00</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 p-0 mt-2 col-xl-3 col-md-6 col-lg-3 col-6 col-sm-6">
+                <div class="card ms-2 item" style="border-radius: 0;">
+                    <div class="card-img-top img-fluid img" style="background-image: url(/Project/Image/1-2.jpg);">
+                    </div>
+                    <div class="card-body pb-1 ps-2 pe-2">
+                        <div class="card-title" style="font-size: 11px;">កាបូបម៉ូតថ្មីទើបចូលថ្មី...</div>
+                        <div class="card-text text-danger d-flex justify-content-end mt-4 pt-4 price">$0.00</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 p-0 mt-2 col-xl-3 col-md-6 col-lg-3 col-6 col-sm-6">
+                <div class="card ms-2 item" style="border-radius: 0;">
+                    <div class="card-img-top img-fluid img" style="background-image: url(/Project/Image/1-3.jpg);">
+                    </div>
+                    <div class="card-body pb-1 ps-2 pe-2">
+                        <div class="card-title" style="font-size: 11px;">លក់បោះដំុកាបូប...</div>
+                        <div class="card-text text-danger d-flex justify-content-end mt-4 pt-4 price">$0.00</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 p-0 mt-2 col-xl-3 col-md-6 col-lg-3 col-6 col-sm-6">
+                <div class="card ms-2 item" style="border-radius: 0;">
+                    <div class="card-img-top img-fluid img" style="background-image: url(/Project/Image/1-3.jpg);">
+                    </div>
+                    <div class="card-body pb-1 ps-2 pe-2">
+                        <div class="card-title" style="font-size: 11px;">កាបូបចូលស្តុកថ្មី...</div>
+                        <div class="card-text text-danger d-flex justify-content-end mt-4 pt-4 price">$11.00</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 p-0 mt-2 col-xl-3 col-md-6 col-lg-3 col-6 col-sm-6">
+                <div class="card item" style="border-radius: 0;">
+                    <div class="card-img-top img-fluid img" style="background-image: url(/Project/Image/1-4.jpg);">
+                    </div>
+                    <div class="card-body pb-1 ps-2 pe-2">
+                        <div class="card-title" style="font-size: 11px;">សាក់កាដូរថ្មី...</div>
+                        <div class="card-text text-danger d-flex justify-content-end mt-4 pt-4 price">$0.00</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 p-0 mt-2 col-xl-3 col-md-6 col-lg-3 col-6 col-sm-6">
+                <div class="card ms-2 item" style="border-radius: 0;">
+                    <div class="card-img-top img-fluid img" style="background-image: url(/Project/Image/1-5.jpg);">
+                    </div>
+                    <div class="card-body pb-1 ps-2 pe-2">
+                        <div class="card-title" style="font-size: 11px;">កាបូបម៉ូតថ្មីទើបចូលថ្មី...</div>
+                        <div class="card-text text-danger d-flex justify-content-end mt-4 pt-4 price">$0.00</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 p-0 mt-2 col-xl-3 col-md-6 col-lg-3 col-6 col-sm-6">
+                <div class="card ms-2 item" style="border-radius: 0;">
+                    <div class="card-img-top img-fluid img" style="background-image: url(/Project/Image/1-6.jpg);">
+                    </div>
+                    <div class="card-body pb-1 ps-2 pe-2">
+                        <div class="card-title" style="font-size: 11px;">លក់បោះដំុកាបូប...</div>
+                        <div class="card-text text-danger d-flex justify-content-end mt-4 pt-4 price">$0.00</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 p-0 mt-2 col-xl-3 col-md-6 col-lg-3 col-6 col-sm-6">
+                <div class="card ms-2 item" style="border-radius: 0;">
+                    <div class="card-img-top img-fluid img" style="background-image: url(/Project/Image/1-7.jpg);">
+                    </div>
+                    <div class="card-body pb-1 ps-2 pe-2">
+                        <div class="card-title" style="font-size: 11px;">កាបូបចូលស្តុកថ្មី...</div>
+                        <div class="card-text text-danger d-flex justify-content-end mt-4 pt-4 price">$11.00</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 p-0 mt-2 col-xl-3 col-md-6 col-lg-3 col-6 col-sm-6">
+                <div class="card item" style="border-radius: 0;">
+                    <div class="card-img-top img-fluid img" style="background-image: url(/Project/Image/1-8.jpg);">
+                    </div>
+                    <div class="card-body pb-1 ps-2 pe-2">
+                        <div class="card-title" style="font-size: 11px;">សាក់កាដូរថ្មី...</div>
+                        <div class="card-text text-danger d-flex justify-content-end mt-4 pt-4 price">$0.00</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 p-0 mt-2 col-xl-3 col-md-6 col-lg-3 col-6 col-sm-6">
+                <div class="card ms-2 item" style="border-radius: 0;">
+                    <div class="card-img-top img-fluid img" style="background-image: url(/Project/Image/1-9.jpg);">
+                    </div>
+                    <div class="card-body pb-1 ps-2 pe-2">
+                        <div class="card-title" style="font-size: 11px;">កាបូបម៉ូតថ្មីទើបចូលថ្មី...</div>
+                        <div class="card-text text-danger d-flex justify-content-end mt-4 pt-4 price">$0.00</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 p-0 mt-2 col-xl-3 col-md-6 col-lg-3 col-6 col-sm-6">
+                <div class="card ms-2 item" style="border-radius: 0;">
+                    <div class="card-img-top img-fluid img" style="background-image: url(/Project/Image/1-10.jpg);">
+                    </div>
+                    <div class="card-body pb-1 ps-2 pe-2">
+                        <div class="card-title" style="font-size: 11px;">លក់បោះដំុកាបូប...</div>
+                        <div class="card-text text-danger d-flex justify-content-end mt-4 pt-4 price">$0.00</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 p-0 mt-2 col-xl-3 col-md-6 col-lg-3 col-6 col-sm-6">
+                <div class="card ms-2 item" style="border-radius: 0;">
+                    <div class="card-img-top img-fluid img" style="background-image: url(/Project/Image/1-11.jpg);">
+                    </div>
+                    <div class="card-body pb-1 ps-2 pe-2">
+                        <div class="card-title" style="font-size: 11px;">កាបូបចូលស្តុកថ្មី...</div>
+                        <div class="card-text text-danger d-flex justify-content-end mt-4 pt-4 price">$11.00</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 p-0 mt-2 col-xl-3 col-md-6 col-lg-3 col-6 col-sm-6">
+                <div class="card item" style="border-radius: 0;">
+                    <div class="card-img-top img-fluid img" style="background-image: url(/Project/Image/1-12.jpg);">
+                    </div>
+                    <div class="card-body pb-1 ps-2 pe-2">
+                        <div class="card-title" style="font-size: 11px;">សាក់កាដូរថ្មី...</div>
+                        <div class="card-text text-danger d-flex justify-content-end mt-4 pt-4 price">$0.00</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 p-0 mt-2 col-xl-3 col-md-6 col-lg-3 col-6 col-sm-6">
+                <div class="card ms-2 item" style="border-radius: 0;">
+                    <div class="card-img-top img-fluid img" style="background-image: url(/Project/Image/1-13.jpg);">
+                    </div>
+                    <div class="card-body pb-1 ps-2 pe-2">
+                        <div class="card-title" style="font-size: 11px;">កាបូបម៉ូតថ្មីទើបចូលថ្មី...</div>
+                        <div class="card-text text-danger d-flex justify-content-end mt-4 pt-4 price">$0.00</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 p-0 mt-2 col-xl-3 col-md-6 col-lg-3 col-6 col-sm-6">
+                <div class="card ms-2 item" style="border-radius: 0;">
+                    <div class="card-img-top img-fluid img" style="background-image: url(/Project/Image/1-14.jpg);">
+                    </div>
+                    <div class="card-body pb-1 ps-2 pe-2">
+                        <div class="card-title" style="font-size: 11px;">លក់បោះដំុកាបូប...</div>
+                        <div class="card-text text-danger d-flex justify-content-end mt-4 pt-4 price">$0.00</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 p-0 mt-2 col-xl-3 col-md-6 col-lg-3 col-6 col-sm-6">
+                <div class="card ms-2 item" style="border-radius: 0;">
+                    <div class="card-img-top img-fluid img" style="background-image: url(/Project/Image/1-15.jpg);">
+                    </div>
+                    <div class="card-body pb-1 ps-2 pe-2">
+                        <div class="card-title" style="font-size: 11px;">កាបូបចូលស្តុកថ្មី...</div>
+                        <div class="card-text text-danger d-flex justify-content-end mt-4 pt-4 price">$11.00</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row pe-0">
+            <div class="col-12 p-0 mt-2"><img src="/Project/Image/1-end.jpg" alt="image" class="w-100 h-100"></div>
+        </div>
+        <!-- step 2 -->
+        <div class="row pe-0">
+            <div class="col-12 mt-3 p-0 pt-1 d-flex justify-content-between sponsor">
+                <h1 class="txt">RECOMMENDED ADS</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3 p-0 mt-2 col-xl-3 col-md-6 col-lg-3 col-6 col-sm-6">
+                <div class="card item" style="border-radius: 0;">
+                    <div class="card-img-top img-fluid img" style="background-image: url(/Project/Image/2-1.jpg);">
+                    </div>
+                    <div class="card-body pb-1 ps-2 pe-2">
+                        <div class="card-title" style="font-size: 11px;">សាក់កាដូរថ្មី...</div>
+                        <div class="card-text text-danger d-flex justify-content-end mt-4 pt-4 price">$0.00</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 p-0 mt-2 col-xl-3 col-md-6 col-lg-3 col-6 col-sm-6">
+                <div class="card ms-2 item" style="border-radius: 0;">
+                    <div class="card-img-top img-fluid img" style="background-image: url(/Project/Image/2-2.jpg);">
+                    </div>
+                    <div class="card-body pb-1 ps-2 pe-2">
+                        <div class="card-title" style="font-size: 11px;">កាបូបម៉ូតថ្មីទើបចូលថ្មី...</div>
+                        <div class="card-text text-danger d-flex justify-content-end mt-4 pt-4 price">$0.00</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 p-0 mt-2 col-xl-3 col-md-6 col-lg-3 col-6 col-sm-6">
+                <div class="card ms-2 item" style="border-radius: 0;">
+                    <div class="card-img-top img-fluid img" style="background-image: url(/Project/Image/2-3.jpg);">
+                    </div>
+                    <div class="card-body pb-1 ps-2 pe-2">
+                        <div class="card-title" style="font-size: 11px;">លក់បោះដំុកាបូប...</div>
+                        <div class="card-text text-danger d-flex justify-content-end mt-4 pt-4 price">$0.00</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 p-0 mt-2 col-xl-3 col-md-6 col-lg-3 col-6 col-sm-6">
+                <div class="card ms-2 item" style="border-radius: 0;">
+                    <div class="card-img-top img-fluid img" style="background-image: url(/Project/Image/2-4.jpg);">
+                    </div>
+                    <div class="card-body pb-1 ps-2 pe-2">
+                        <div class="card-title" style="font-size: 11px;">កាបូបចូលស្តុកថ្មី...</div>
+                        <div class="card-text text-danger d-flex justify-content-end mt-4 pt-4 price">$11.00</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 p-0 mt-2 col-xl-3 col-md-6 col-lg-3 col-6 col-sm-6">
+                <div class="card item" style="border-radius: 0;">
+                    <div class="card-img-top img-fluid img" style="background-image: url(/Project/Image/2-5.jpg);">
+                    </div>
+                    <div class="card-body pb-1 ps-2 pe-2">
+                        <div class="card-title" style="font-size: 11px;">សាក់កាដូរថ្មី...</div>
+                        <div class="card-text text-danger d-flex justify-content-end mt-4 pt-4 price">$0.00</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 p-0 mt-2 col-xl-3 col-md-6 col-lg-3 col-6 col-sm-6">
+                <div class="card ms-2 item" style="border-radius: 0;">
+                    <div class="card-img-top img-fluid img" style="background-image: url(/Project/Image/2-6.jpg);">
+                    </div>
+                    <div class="card-body pb-1 ps-2 pe-2">
+                        <div class="card-title" style="font-size: 11px;">កាបូបម៉ូតថ្មីទើបចូលថ្មី...</div>
+                        <div class="card-text text-danger d-flex justify-content-end mt-4 pt-4 price">$0.00</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 p-0 mt-2 col-xl-3 col-md-6 col-lg-3 col-6 col-sm-6">
+                <div class="card ms-2 item" style="border-radius: 0;">
+                    <div class="card-img-top img-fluid img" style="background-image: url(/Project/Image/2-7.jpg);">
+                    </div>
+                    <div class="card-body pb-1 ps-2 pe-2">
+                        <div class="card-title" style="font-size: 11px;">លក់បោះដំុកាបូប...</div>
+                        <div class="card-text text-danger d-flex justify-content-end mt-4 pt-4 price">$0.00</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 p-0 mt-2 col-xl-3 col-md-6 col-lg-3 col-6 col-sm-6">
+                <div class="card ms-2 item" style="border-radius: 0;">
+                    <div class="card-img-top img-fluid img" style="background-image: url(/Project/Image/2-8.jpg);">
+                    </div>
+                    <div class="card-body pb-1 ps-2 pe-2">
+                        <div class="card-title" style="font-size: 11px;">កាបូបចូលស្តុកថ្មី...</div>
+                        <div class="card-text text-danger d-flex justify-content-end mt-4 pt-4 price">$11.00</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 p-0 mt-2 col-xl-3 col-md-6 col-lg-3 col-6 col-sm-6">
+                <div class="card item" style="border-radius: 0;">
+                    <div class="card-img-top img-fluid img" style="background-image: url(/Project/Image/2-9.jpg);">
+                    </div>
+                    <div class="card-body pb-1 ps-2 pe-2">
+                        <div class="card-title" style="font-size: 11px;">សាក់កាដូរថ្មី...</div>
+                        <div class="card-text text-danger d-flex justify-content-end mt-4 pt-4 price">$0.00</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 p-0 mt-2 col-xl-3 col-md-6 col-lg-3 col-6 col-sm-6">
+                <div class="card ms-2 item" style="border-radius: 0;">
+                    <div class="card-img-top img-fluid img" style="background-image: url(/Project/Image/2-10.jpg);">
+                    </div>
+                    <div class="card-body pb-1 ps-2 pe-2">
+                        <div class="card-title" style="font-size: 11px;">កាបូបម៉ូតថ្មីទើបចូលថ្មី...</div>
+                        <div class="card-text text-danger d-flex justify-content-end mt-4 pt-4 price">$0.00</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 p-0 mt-2 col-xl-3 col-md-6 col-lg-3 col-6 col-sm-6">
+                <div class="card ms-2 item" style="border-radius: 0;">
+                    <div class="card-img-top img-fluid img" style="background-image: url(/Project/Image/2-11.jpg);">
+                    </div>
+                    <div class="card-body pb-1 ps-2 pe-2">
+                        <div class="card-title" style="font-size: 11px;">លក់បោះដំុកាបូប...</div>
+                        <div class="card-text text-danger d-flex justify-content-end mt-4 pt-4 price">$0.00</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 p-0 mt-2 col-xl-3 col-md-6 col-lg-3 col-6 col-sm-6">
+                <div class="card ms-2 item" style="border-radius: 0;">
+                    <div class="card-img-top img-fluid img" style="background-image: url(/Project/Image/2-12.jpg);">
+                    </div>
+                    <div class="card-body pb-1 ps-2 pe-2">
+                        <div class="card-title" style="font-size: 11px;">កាបូបចូលស្តុកថ្មី...</div>
+                        <div class="card-text text-danger d-flex justify-content-end mt-4 pt-4 price">$11.00</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 p-0 mt-2 col-xl-3 col-md-6 col-lg-3 col-6 col-sm-6">
+                <div class="card item" style="border-radius: 0;">
+                    <div class="card-img-top img-fluid img" style="background-image: url(/Project/Image/2-13.jpg);">
+                    </div>
+                    <div class="card-body pb-1 ps-2 pe-2">
+                        <div class="card-title" style="font-size: 11px;">សាក់កាដូរថ្មី...</div>
+                        <div class="card-text text-danger d-flex justify-content-end mt-4 pt-4 price">$0.00</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 p-0 mt-2 col-xl-3 col-md-6 col-lg-3 col-6 col-sm-6">
+                <div class="card ms-2 item" style="border-radius: 0;">
+                    <div class="card-img-top img-fluid img" style="background-image: url(/Project/Image/2-14.jpg);">
+                    </div>
+                    <div class="card-body pb-1 ps-2 pe-2">
+                        <div class="card-title" style="font-size: 11px;">កាបូបម៉ូតថ្មីទើបចូលថ្មី...</div>
+                        <div class="card-text text-danger d-flex justify-content-end mt-4 pt-4 price">$0.00</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 p-0 mt-2 col-xl-3 col-md-6 col-lg-3 col-6 col-sm-6">
+                <div class="card ms-2 item" style="border-radius: 0;">
+                    <div class="card-img-top img-fluid img" style="background-image: url(/Project/Image/2-15.jpg);">
+                    </div>
+                    <div class="card-body pb-1 ps-2 pe-2">
+                        <div class="card-title" style="font-size: 11px;">លក់បោះដំុកាបូប...</div>
+                        <div class="card-text text-danger d-flex justify-content-end mt-4 pt-4 price">$0.00</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 p-0 mt-2 col-xl-3 col-md-6 col-lg-3 col-6 col-sm-6">
+                <div class="card ms-2 item" style="border-radius: 0;">
+                    <div class="card-img-top img-fluid img" style="background-image: url(/Project/Image/2-16.jpg);">
+                    </div>
+                    <div class="card-body pb-1 ps-2 pe-2">
+                        <div class="card-title" style="font-size: 11px;">កាបូបចូលស្តុកថ្មី...</div>
+                        <div class="card-text text-danger d-flex justify-content-end mt-4 pt-4 price">$11.00</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 p-0 mt-2 col-xl-3 col-md-6 col-lg-3 col-6 col-sm-6">
+                <div class="card item" style="border-radius: 0;">
+                    <div class="card-img-top img-fluid img" style="background-image: url(/Project/Image/2-17.jpg);">
+                    </div>
+                    <div class="card-body pb-1 ps-2 pe-2">
+                        <div class="card-title" style="font-size: 11px;">សាក់កាដូរថ្មី...</div>
+                        <div class="card-text text-danger d-flex justify-content-end mt-4 pt-4 price">$0.00</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 p-0 mt-2 col-xl-3 col-md-6 col-lg-3 col-6 col-sm-6">
+                <div class="card ms-2 item" style="border-radius: 0;">
+                    <div class="card-img-top img-fluid img" style="background-image: url(/Project/Image/2-18.jpg);">
+                    </div>
+                    <div class="card-body pb-1 ps-2 pe-2">
+                        <div class="card-title" style="font-size: 11px;">កាបូបម៉ូតថ្មីទើបចូលថ្មី...</div>
+                        <div class="card-text text-danger d-flex justify-content-end mt-4 pt-4 price">$0.00</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 p-0 mt-2 col-xl-3 col-md-6 col-lg-3 col-6 col-sm-6">
+                <div class="card ms-2 item" style="border-radius: 0;">
+                    <div class="card-img-top img-fluid img" style="background-image: url(/Project/Image/2-20.jpg);">
+                    </div>
+                    <div class="card-body pb-1 ps-2 pe-2">
+                        <div class="card-title" style="font-size: 11px;">លក់បោះដំុកាបូប...</div>
+                        <div class="card-text text-danger d-flex justify-content-end mt-4 pt-4 price">$0.00</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 p-0 mt-2 col-xl-3 col-md-6 col-lg-3 col-6 col-sm-6">
+                <div class="card ms-2 item" style="border-radius: 0;">
+                    <div class="card-img-top img-fluid img" style="background-image: url(/Project/Image/2-21.jpg);">
+                    </div>
+                    <div class="card-body pb-1 ps-2 pe-2">
+                        <div class="card-title" style="font-size: 11px;">កាបូបចូលស្តុកថ្មី...</div>
+                        <div class="card-text text-danger d-flex justify-content-end mt-4 pt-4 price">$11.00</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 p-0 mt-2 col-xl-3 col-md-6 col-lg-3 col-6 col-sm-6">
+                <div class="card item" style="border-radius: 0;">
+                    <div class="card-img-top img-fluid img" style="background-image: url(/Project/Image/2-22.jpg);">
+                    </div>
+                    <div class="card-body pb-1 ps-2 pe-2">
+                        <div class="card-title" style="font-size: 11px;">សាក់កាដូរថ្មី...</div>
+                        <div class="card-text text-danger d-flex justify-content-end mt-4 pt-4 price">$0.00</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 p-0 mt-2 col-xl-3 col-md-6 col-lg-3 col-6 col-sm-6">
+                <div class="card ms-2 item" style="border-radius: 0;">
+                    <div class="card-img-top img-fluid img" style="background-image: url(/Project/Image/2-23.jpg);">
+                    </div>
+                    <div class="card-body pb-1 ps-2 pe-2">
+                        <div class="card-title" style="font-size: 11px;">កាបូបម៉ូតថ្មីទើបចូលថ្មី...</div>
+                        <div class="card-text text-danger d-flex justify-content-end mt-4 pt-4 price">$0.00</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 p-0 mt-2 col-xl-3 col-md-6 col-lg-3 col-6 col-sm-6">
+                <div class="card ms-2 item" style="border-radius: 0;">
+                    <div class="card-img-top img-fluid img" style="background-image: url(/Project/Image/2-24.jpg);">
+                    </div>
+                    <div class="card-body pb-1 ps-2 pe-2">
+                        <div class="card-title" style="font-size: 11px;">លក់បោះដំុកាបូប...</div>
+                        <div class="card-text text-danger d-flex justify-content-end mt-4 pt-4 price">$0.00</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 p-0 mt-2 col-xl-3 col-md-6 col-lg-3 col-6 col-sm-6">
+                <div class="card ms-2 item" style="border-radius: 0;">
+                    <div class="card-img-top img-fluid img" style="background-image: url(/Project/Image/2-6.jpg);">
+                    </div>
+                    <div class="card-body pb-1 ps-2 pe-2">
+                        <div class="card-title" style="font-size: 11px;">កាបូបចូលស្តុកថ្មី...</div>
+                        <div class="card-text text-danger d-flex justify-content-end mt-4 pt-4 price">$11.00</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row pe-0">
+            <div class="col-12 p-0 mt-2"><img src="/Project/Image/1-end.jpg" alt="image" class="w-100 h-100"></div>
+        </div>
+        <!-- step 3 -->
+        <div class="row pe-0">
+            <div class="col-12 mt-3 p-0 pt-1 d-flex justify-content-between sponsor">
+                <h1 class="txt">POPULAR ADS</h1>
+            </div>
+        </div>
+        <div class="row pe-0">
+            <div class="col-3 p-0 mt-2 col-xl-3 col-md-6 col-lg-3 col-6 col-sm-6">
+                <div class="card item" style="border-radius: 0;">
+                    <div class="card-img-top img-fluid img" style="background-image: url(/Project/Image/2-10.jpg);">
+                    </div>
+                    <div class="card-body pb-1 ps-2 pe-2">
+                        <div class="card-title" style="font-size: 11px;">សាក់កាដូរថ្មី...</div>
+                        <div class="card-text text-danger d-flex justify-content-end mt-4 pt-4 price">$0.00</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 p-0 mt-2 col-xl-3 col-md-6 col-lg-3 col-6 col-sm-6">
+                <div class="card ms-2 item" style="border-radius: 0;">
+                    <div class="card-img-top img-fluid img" style="background-image: url(/Project/Image/1-2.jpg);">
+                    </div>
+                    <div class="card-body pb-1 ps-2 pe-2">
+                        <div class="card-title" style="font-size: 11px;">កាបូបម៉ូតថ្មីទើបចូលថ្មី...</div>
+                        <div class="card-text text-danger d-flex justify-content-end mt-4 pt-4 price">$0.00</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 p-0 mt-2 col-xl-3 col-md-6 col-lg-3 col-6 col-sm-6">
+                <div class="card ms-2 item" style="border-radius: 0;">
+                    <div class="card-img-top img-fluid img" style="background-image: url(/Project/Image/1-3.jpg);">
+                    </div>
+                    <div class="card-body pb-1 ps-2 pe-2">
+                        <div class="card-title" style="font-size: 11px;">លក់បោះដំុកាបូប...</div>
+                        <div class="card-text text-danger d-flex justify-content-end mt-4 pt-4 price">$0.00</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 p-0 mt-2 col-xl-3 col-md-6 col-lg-3 col-6 col-sm-6">
+                <div class="card ms-2 item" style="border-radius: 0;">
+                    <div class="card-img-top img-fluid img" style="background-image: url(/Project/Image/1-3.jpg);">
+                    </div>
+                    <div class="card-body pb-1 ps-2 pe-2">
+                        <div class="card-title" style="font-size: 11px;">កាបូបចូលស្តុកថ្មី...</div>
+                        <div class="card-text text-danger d-flex justify-content-end mt-4 pt-4 price">$11.00</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 p-0 mt-2 col-xl-3 col-md-6 col-lg-3 col-6 col-sm-6">
+                <div class="card item" style="border-radius: 0;">
+                    <div class="card-img-top img-fluid img" style="background-image: url(/Project/Image/1-1.jpg);">
+                    </div>
+                    <div class="card-body pb-1 ps-2 pe-2">
+                        <div class="card-title" style="font-size: 11px;">សាក់កាដូរថ្មី...</div>
+                        <div class="card-text text-danger d-flex justify-content-end mt-4 pt-4 price">$0.00</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 p-0 mt-2 col-xl-3 col-md-6 col-lg-3 col-6 col-sm-6">
+                <div class="card ms-2 item" style="border-radius: 0;">
+                    <div class="card-img-top img-fluid img" style="background-image: url(/Project/Image/1-2.jpg);">
+                    </div>
+                    <div class="card-body pb-1 ps-2 pe-2">
+                        <div class="card-title" style="font-size: 11px;">កាបូបម៉ូតថ្មីទើបចូលថ្មី...</div>
+                        <div class="card-text text-danger d-flex justify-content-end mt-4 pt-4 price">$0.00</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 p-0 mt-2 col-xl-3 col-md-6 col-lg-3 col-6 col-sm-6">
+                <div class="card ms-2 item" style="border-radius: 0;">
+                    <div class="card-img-top img-fluid img" style="background-image: url(/Project/Image/1-3.jpg);">
+                    </div>
+                    <div class="card-body pb-1 ps-2 pe-2">
+                        <div class="card-title" style="font-size: 11px;">លក់បោះដំុកាបូប...</div>
+                        <div class="card-text text-danger d-flex justify-content-end mt-4 pt-4 price">$0.00</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 p-0 mt-2 col-xl-3 col-md-6 col-lg-3 col-6 col-sm-6">
+                <div class="card ms-2 item" style="border-radius: 0;">
+                    <div class="card-img-top img-fluid img" style="background-image: url(/Project/Image/1-3.jpg);">
+                    </div>
+                    <div class="card-body pb-1 ps-2 pe-2">
+                        <div class="card-title" style="font-size: 11px;">កាបូបចូលស្តុកថ្មី...</div>
+                        <div class="card-text text-danger d-flex justify-content-end mt-4 pt-4 price">$11.00</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 p-0 mt-2 col-xl-3 col-md-6 col-lg-3 col-6 col-sm-6">
+                <div class="card item" style="border-radius: 0;">
+                    <div class="card-img-top img-fluid img" style="background-image: url(/Project/Image/1-1.jpg);">
+                    </div>
+                    <div class="card-body pb-1 ps-2 pe-2">
+                        <div class="card-title" style="font-size: 11px;">សាក់កាដូរថ្មី...</div>
+                        <div class="card-text text-danger d-flex justify-content-end mt-4 pt-4 price">$0.00</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 p-0 mt-2 col-xl-3 col-md-6 col-lg-3 col-6 col-sm-6">
+                <div class="card ms-2 item" style="border-radius: 0;">
+                    <div class="card-img-top img-fluid img" style="background-image: url(/Project/Image/1-2.jpg);">
+                    </div>
+                    <div class="card-body pb-1 ps-2 pe-2">
+                        <div class="card-title" style="font-size: 11px;">កាបូបម៉ូតថ្មីទើបចូលថ្មី...</div>
+                        <div class="card-text text-danger d-flex justify-content-end mt-4 pt-4 price">$0.00</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 p-0 mt-2 col-xl-3 col-md-6 col-lg-3 col-6 col-sm-6">
+                <div class="card ms-2 item" style="border-radius: 0;">
+                    <div class="card-img-top img-fluid img" style="background-image: url(/Project/Image/1-3.jpg);">
+                    </div>
+                    <div class="card-body pb-1 ps-2 pe-2">
+                        <div class="card-title" style="font-size: 11px;">លក់បោះដំុកាបូប...</div>
+                        <div class="card-text text-danger d-flex justify-content-end mt-4 pt-4 price">$0.00</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 p-0 mt-2 col-xl-3 col-md-6 col-lg-3 col-6 col-sm-6">
+                <div class="card ms-2 item" style="border-radius: 0;">
+                    <div class="card-img-top img-fluid img" style="background-image: url(/Project/Image/1-3.jpg);">
+                    </div>
+                    <div class="card-body pb-1 ps-2 pe-2">
+                        <div class="card-title" style="font-size: 11px;">កាបូបចូលស្តុកថ្មី...</div>
+                        <div class="card-text text-danger d-flex justify-content-end mt-4 pt-4 price">$11.00</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 p-0 mt-2 col-xl-3 col-md-6 col-lg-3 col-6 col-sm-6">
+                <div class="card item" style="border-radius: 0;">
+                    <div class="card-img-top img-fluid img" style="background-image: url(/Project/Image/1-1.jpg);">
+                    </div>
+                    <div class="card-body pb-1 ps-2 pe-2">
+                        <div class="card-title" style="font-size: 11px;">សាក់កាដូរថ្មី...</div>
+                        <div class="card-text text-danger d-flex justify-content-end mt-4 pt-4 price">$0.00</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 p-0 mt-2 col-xl-3 col-md-6 col-lg-3 col-6 col-sm-6">
+                <div class="card ms-2 item" style="border-radius: 0;">
+                    <div class="card-img-top img-fluid img" style="background-image: url(/Project/Image/1-2.jpg);">
+                    </div>
+                    <div class="card-body pb-1 ps-2 pe-2">
+                        <div class="card-title" style="font-size: 11px;">កាបូបម៉ូតថ្មីទើបចូលថ្មី...</div>
+                        <div class="card-text text-danger d-flex justify-content-end mt-4 pt-4 price">$0.00</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 p-0 mt-2 col-xl-3 col-md-6 col-lg-3 col-6 col-sm-6">
+                <div class="card ms-2 item" style="border-radius: 0;">
+                    <div class="card-img-top img-fluid img" style="background-image: url(/Project/Image/1-3.jpg);">
+                    </div>
+                    <div class="card-body pb-1 ps-2 pe-2">
+                        <div class="card-title" style="font-size: 11px;">លក់បោះដំុកាបូប...</div>
+                        <div class="card-text text-danger d-flex justify-content-end mt-4 pt-4 price">$0.00</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 p-0 mt-2 col-xl-3 col-md-6 col-lg-3 col-6 col-sm-6">
+                <div class="card ms-2 item" style="border-radius: 0;">
+                    <div class="card-img-top img-fluid img" style="background-image: url(/Project/Image/1-3.jpg);">
+                    </div>
+                    <div class="card-body pb-1 ps-2 pe-2">
+                        <div class="card-title" style="font-size: 11px;">កាបូបចូលស្តុកថ្មី...</div>
+                        <div class="card-text text-danger d-flex justify-content-end mt-4 pt-4 price">$11.00</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 p-0 mt-2 col-xl-3 col-md-6 col-lg-3 col-6 col-sm-6">
+                <div class="card item" style="border-radius: 0;">
+                    <div class="card-img-top img-fluid img" style="background-image: url(/Project/Image/1-1.jpg);">
+                    </div>
+                    <div class="card-body pb-1 ps-2 pe-2">
+                        <div class="card-title" style="font-size: 11px;">សាក់កាដូរថ្មី...</div>
+                        <div class="card-text text-danger d-flex justify-content-end mt-4 pt-4 price">$0.00</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 p-0 mt-2 col-xl-3 col-md-6 col-lg-3 col-6 col-sm-6">
+                <div class="card ms-2 item" style="border-radius: 0;">
+                    <div class="card-img-top img-fluid img" style="background-image: url(/Project/Image/1-2.jpg);">
+                    </div>
+                    <div class="card-body pb-1 ps-2 pe-2">
+                        <div class="card-title" style="font-size: 11px;">កាបូបម៉ូតថ្មីទើបចូលថ្មី...</div>
+                        <div class="card-text text-danger d-flex justify-content-end mt-4 pt-4 price">$0.00</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 p-0 mt-2 col-xl-3 col-md-6 col-lg-3 col-6 col-sm-6">
+                <div class="card ms-2 item" style="border-radius: 0;">
+                    <div class="card-img-top img-fluid img" style="background-image: url(/Project/Image/1-3.jpg);">
+                    </div>
+                    <div class="card-body pb-1 ps-2 pe-2">
+                        <div class="card-title" style="font-size: 11px;">លក់បោះដំុកាបូប...</div>
+                        <div class="card-text text-danger d-flex justify-content-end mt-4 pt-4 price">$0.00</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 p-0 mt-2 col-xl-3 col-md-6 col-lg-3 col-6 col-sm-6">
+                <div class="card ms-2 item" style="border-radius: 0;">
+                    <div class="card-img-top img-fluid img" style="background-image: url(/Project/Image/1-3.jpg);">
+                    </div>
+                    <div class="card-body pb-1 ps-2 pe-2">
+                        <div class="card-title" style="font-size: 11px;">កាបូបចូលស្តុកថ្មី...</div>
+                        <div class="card-text text-danger d-flex justify-content-end mt-4 pt-4 price">$11.00</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 p-0 mt-2 col-xl-3 col-md-6 col-lg-3 col-6 col-sm-6">
+                <div class="card item" style="border-radius: 0;">
+                    <div class="card-img-top img-fluid img" style="background-image: url(/Project/Image/1-1.jpg);">
+                    </div>
+                    <div class="card-body pb-1 ps-2 pe-2">
+                        <div class="card-title" style="font-size: 11px;">សាក់កាដូរថ្មី...</div>
+                        <div class="card-text text-danger d-flex justify-content-end mt-4 pt-4 price">$0.00</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 p-0 mt-2 col-xl-3 col-md-6 col-lg-3 col-6 col-sm-6">
+                <div class="card ms-2 item" style="border-radius: 0;">
+                    <div class="card-img-top img-fluid img" style="background-image: url(/Project/Image/1-2.jpg);">
+                    </div>
+                    <div class="card-body pb-1 ps-2 pe-2">
+                        <div class="card-title" style="font-size: 11px;">កាបូបម៉ូតថ្មីទើបចូលថ្មី...</div>
+                        <div class="card-text text-danger d-flex justify-content-end mt-4 pt-4 price">$0.00</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 p-0 mt-2 col-xl-3 col-md-6 col-lg-3 col-6 col-sm-6">
+                <div class="card ms-2 item" style="border-radius: 0;">
+                    <div class="card-img-top img-fluid img" style="background-image: url(/Project/Image/1-3.jpg);">
+                    </div>
+                    <div class="card-body pb-1 ps-2 pe-2">
+                        <div class="card-title" style="font-size: 11px;">លក់បោះដំុកាបូប...</div>
+                        <div class="card-text text-danger d-flex justify-content-end mt-4 pt-4 price">$0.00</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 p-0 mt-2 col-xl-3 col-md-6 col-lg-3 col-6 col-sm-6">
+                <div class="card ms-2 item" style="border-radius: 0;">
+                    <div class="card-img-top img-fluid img" style="background-image: url(/Project/Image/1-3.jpg);">
+                    </div>
+                    <div class="card-body pb-1 ps-2 pe-2">
+                        <div class="card-title" style="font-size: 11px;">កាបូបចូលស្តុកថ្មី...</div>
+                        <div class="card-text text-danger d-flex justify-content-end mt-4 pt-4 price">$11.00</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row pe-0">
+            <div class="col-12 p-0 mt-2"><img src="/Project/Image/1-end.jpg" alt="image" class="w-100 h-100"></div>
+        </div>
+        <!-- step 4 -->
+        <div class="row pe-0">
+            <div class="col-12 mt-3 p-0 pt-1 d-flex justify-content-between sponsor">
+                <h1 class="txt">LATEST ADS</h1>
+            </div>
+        </div>
+        <div class="row pe-0">
+            <div class="col-3 p-0 mt-2 col-xl-3 col-md-6 col-lg-3 col-6 col-sm-6">
+                <div class="card item" style="border-radius: 0;">
+                    <div class="card-img-top img-fluid img" style="background-image: url(/Project/Image/1-1.jpg);">
+                    </div>
+                    <div class="card-body pb-1 ps-2 pe-2">
+                        <div class="card-title" style="font-size: 11px;">សាក់កាដូរថ្មី...</div>
+                        <div class="card-text text-danger d-flex justify-content-end mt-4 pt-4 price">$0.00</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 p-0 mt-2 col-xl-3 col-md-6 col-lg-3 col-6 col-sm-6">
+                <div class="card ms-2 item" style="border-radius: 0;">
+                    <div class="card-img-top img-fluid img" style="background-image: url(/Project/Image/1-2.jpg);">
+                    </div>
+                    <div class="card-body pb-1 ps-2 pe-2">
+                        <div class="card-title" style="font-size: 11px;">កាបូបម៉ូតថ្មីទើបចូលថ្មី...</div>
+                        <div class="card-text text-danger d-flex justify-content-end mt-4 pt-4 price">$0.00</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 p-0 mt-2 col-xl-3 col-md-6 col-lg-3 col-6 col-sm-6">
+                <div class="card ms-2 item" style="border-radius: 0;">
+                    <div class="card-img-top img-fluid img" style="background-image: url(/Project/Image/1-3.jpg);">
+                    </div>
+                    <div class="card-body pb-1 ps-2 pe-2">
+                        <div class="card-title" style="font-size: 11px;">លក់បោះដំុកាបូប...</div>
+                        <div class="card-text text-danger d-flex justify-content-end mt-4 pt-4 price">$0.00</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 p-0 mt-2 col-xl-3 col-md-6 col-lg-3 col-6 col-sm-6">
+                <div class="card ms-2 item" style="border-radius: 0;">
+                    <div class="card-img-top img-fluid img" style="background-image: url(/Project/Image/1-3.jpg);">
+                    </div>
+                    <div class="card-body pb-1 ps-2 pe-2">
+                        <div class="card-title" style="font-size: 11px;">កាបូបចូលស្តុកថ្មី...</div>
+                        <div class="card-text text-danger d-flex justify-content-end mt-4 pt-4 price">$11.00</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 p-0 mt-2 col-xl-3 col-md-6 col-lg-3 col-6 col-sm-6">
+                <div class="card item" style="border-radius: 0;">
+                    <div class="card-img-top img-fluid img" style="background-image: url(/Project/Image/1-1.jpg);">
+                    </div>
+                    <div class="card-body pb-1 ps-2 pe-2">
+                        <div class="card-title" style="font-size: 11px;">សាក់កាដូរថ្មី...</div>
+                        <div class="card-text text-danger d-flex justify-content-end mt-4 pt-4 price">$0.00</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- step 5 -->
+        <div class="row pe-0">
+            <div class="col-12 mt-3 p-0 pt-1 d-flex justify-content-between sponsor">
+                <h1 class="txt">BROWSE BY STORE</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3 p-0 mt-2 col-xl-3 col-md-6 col-lg-3 col-6 col-sm-6">
+                <div class="card item" style="border-radius: 0;">
+                    <div class="card-img-top img-fluid img" style="background-image: url(/Project/Image/1-2.jpg);">
+                    </div>
+                    <div class="card-body pb-1 ps-2 pe-2">
+                        <div class="card-title" style="font-size: 11px;">កាបូបម៉ូតថ្មីទើបចូលថ្មី...</div>
+                        <div class="card-text text-danger d-flex justify-content-end mt-4 pt-4 price">$0.00</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 p-0 mt-2 col-xl-3 col-md-6 col-lg-3 col-6 col-sm-6">
+                <div class="card ms-2 item" style="border-radius: 0;">
+                    <div class="card-img-top img-fluid img" style="background-image: url(/Project/Image/1-3.jpg);">
+                    </div>
+                    <div class="card-body pb-1 ps-2 pe-2">
+                        <div class="card-title" style="font-size: 11px;">លក់បោះដំុកាបូប...</div>
+                        <div class="card-text text-danger d-flex justify-content-end mt-4 pt-4 price">$0.00</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 p-0 mt-2 col-xl-3 col-md-6 col-lg-3 col-6 col-sm-6">
+                <div class="card ms-2 item" style="border-radius: 0;">
+                    <div class="card-img-top img-fluid img" style="background-image: url(/Project/Image/1-3.jpg);">
+                    </div>
+                    <div class="card-body pb-1 ps-2 pe-2">
+                        <div class="card-title" style="font-size: 11px;">កាបូបចូលស្តុកថ្មី...</div>
+                        <div class="card-text text-danger d-flex justify-content-end mt-4 pt-4 price">$11.00</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 p-0 mt-2 col-xl-3 col-md-6 col-lg-3 col-6 col-sm-6">
+                <div class="card ms-2 item" style="border-radius: 0;">
+                    <div class="card-img-top img-fluid img" style="background-image: url(/Project/Image/1-1.jpg);">
+                    </div>
+                    <div class="card-body pb-1 ps-2 pe-2">
+                        <div class="card-title" style="font-size: 11px;">សាក់កាដូរថ្មី...</div>
+                        <div class="card-text text-danger d-flex justify-content-end mt-4 pt-4 price">$0.00</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 p-0 mt-2 col-xl-3 col-md-6 col-lg-3 col-6 col-sm-6">
+                <div class="card item" style="border-radius: 0;">
+                    <div class="card-img-top img-fluid img" style="background-image: url(/Project/Image/1-2.jpg);">
+                    </div>
+                    <div class="card-body pb-1 ps-2 pe-2">
+                        <div class="card-title" style="font-size: 11px;">កាបូបម៉ូតថ្មីទើបចូលថ្មី...</div>
+                        <div class="card-text text-danger d-flex justify-content-end mt-4 pt-4 price">$0.00</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 p-0 mt-2 col-xl-3 col-md-6 col-lg-3 col-6 col-sm-6">
+                <div class="card ms-2 item" style="border-radius: 0;">
+                    <div class="card-img-top img-fluid img" style="background-image: url(/Project/Image/1-3.jpg);">
+                    </div>
+                    <div class="card-body pb-1 ps-2 pe-2">
+                        <div class="card-title" style="font-size: 11px;">លក់បោះដំុកាបូប...</div>
+                        <div class="card-text text-danger d-flex justify-content-end mt-4 pt-4 price">$0.00</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row m-0 p-3 pb-2 mt-4 bg-body" style="box-shadow: 0 0 7px rgba(0, 0, 0, 0.099);">
+            <div class="row">
+                <div class="col-12 p-0 m-0">
+                    <h1 class="text-success" style="font-size: 27px;">Product by Location</h1>
+                </div>
+            </div>
+            <div class="col-12 m-0 p-0">
+                <ul class="nav p-0 m-0">
+                    <li class="nav-item w-25"><a href="#" class="nav-link text-decoration-none text-secondary ps-0"
+                            style="font-size: 13px;">Phom Penh</a></li>
+                    <li class="nav-item w-25"><a href="#" class="nav-link text-decoration-none text-secondary ps-0"
+                            style="font-size: 13px;">Battambang</a></li>
+                    <li class="nav-item w-25"><a href="#" class="nav-link text-decoration-none text-secondary ps-0"
+                            style="font-size: 13px;">Kompong Spue</a></li>
+                    <li class="nav-item w-25"><a href="#" class="nav-link text-decoration-none text-secondary ps-0"
+                            style="font-size: 13px;">Koh Kong</a></li>
+                    <li class="nav-item w-25"><a href="#" class="nav-link text-decoration-none text-secondary ps-0"
+                            style="font-size: 13px;">Pailin</a></li>
+                    <li class="nav-item w-25"><a href="#" class="nav-link text-decoration-none text-secondary ps-0"
+                            style="font-size: 13px;">Ratanakiri</a></li>
+                    <li class="nav-item w-25"><a href="#" class="nav-link text-decoration-none text-secondary ps-0"
+                            style="font-size: 13px;">Tboung Khmom</a></li>
+                    <li class="nav-item w-25"><a href="#" class="nav-link text-decoration-none text-secondary ps-0"
+                            style="font-size: 13px;">Preah Sihanouk</a></li>
+                    <li class="nav-item w-25"><a href="#" class="nav-link text-decoration-none text-secondary ps-0"
+                            style="font-size: 13px;">Kampong Cham</a></li>
+                    <li class="nav-item w-25"><a href="#" class="nav-link text-decoration-none text-secondary ps-0"
+                            style="font-size: 13px;">Siem Reap</a></li>
+                    <li class="nav-item w-25"><a href="#" class="nav-link text-decoration-none text-secondary ps-0"
+                            style="font-size: 13px;">Kandal</a></li>
+                    <li class="nav-item w-25"><a href="#" class="nav-link text-decoration-none text-secondary ps-0"
+                            style="font-size: 13px;">Banteay Meanchey</a></li>
+                    <li class="nav-item w-25"><a href="#" class="nav-link text-decoration-none text-secondary ps-0"
+                            style="font-size: 13px;">Kampong Chhnang</a></li>
+                    <li class="nav-item w-25"><a href="#" class="nav-link text-decoration-none text-secondary ps-0"
+                            style="font-size: 13px;">Kampong Thom</a></li>
+                    <li class="nav-item w-25"><a href="#" class="nav-link text-decoration-none text-secondary ps-0"
+                            style="font-size: 13px;">Kampot</a></li>
+                    <li class="nav-item w-25"><a href="#" class="nav-link text-decoration-none text-secondary ps-0"
+                            style="font-size: 13px;">Kep</a></li>
+                    <li class="nav-item w-25"><a href="#" class="nav-link text-decoration-none text-secondary ps-0"
+                            style="font-size: 13px;">Kratie</a></li>
+                    <li class="nav-item w-25"><a href="#" class="nav-link text-decoration-none text-secondary ps-0"
+                            style="font-size: 13px;">Mondulkiri</a></li>
+                    <li class="nav-item w-25"><a href="#" class="nav-link text-decoration-none text-secondary ps-0"
+                            style="font-size: 13px;">Otdar Meanchey</a></li>
+                    <li class="nav-item w-25"><a href="#" class="nav-link text-decoration-none text-secondary ps-0"
+                            style="font-size: 13px;">Preah Vihear</a></li>
+                    <li class="nav-item w-25"><a href="#" class="nav-link text-decoration-none text-secondary ps-0"
+                            style="font-size: 13px;">Prey Veng</a></li>
+                    <li class="nav-item w-25"><a href="#" class="nav-link text-decoration-none text-secondary ps-0"
+                            style="font-size: 13px;">Pursat</a></li>
+                    <li class="nav-item w-25"><a href="#" class="nav-link text-decoration-none text-secondary ps-0"
+                            style="font-size: 13px;">Stung Treng</a></li>
+                    <li class="nav-item w-25"><a href="#" class="nav-link text-decoration-none text-secondary ps-0"
+                            style="font-size: 13px;">Svay Rieng</a></li>
+                    <li class="nav-item w-25"><a href="#" class="nav-link text-decoration-none text-secondary ps-0"
+                            style="font-size: 13px;">Takeo</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid pt-4 mt-4" style="background-color: rgb(11, 83, 69);">
+        <div class="row m-0 ps-5">
+            <div class="col-3 w-25">
+                <ul class="nav">
+                    <li class="nav-item w-100">
+                        <h1 style="font-size: 16px; font-weight: bold; color: white;">About Us</h1>
+                    </li>
+                    <li class="nav-item w-100">
+                        <p class="m-0" style="font-size: 12px; color: rgb(192, 190, 190);">Tinglok.com is the Online
+                            Classified Ads</p>
+                    </li>
+                    <li class="nav-item w-100">
+                        <p class="m-0" style="font-size: 12px; color: rgb(192, 190, 190);">website in Cambodia that
+                            connect the Sellers</p>
+                    </li>
+                    <li class="nav-item w-100">
+                        <p class="m-0" style="font-size: 12px; color: rgb(192, 190, 190);">and Buyers together. Enjoy
+                            your Tinglok with us!</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-3 w-25">
+                <ul class="nav">
+                    <li class="nav-item w-100">
+                        <h1 style="font-size: 16px; font-weight: bold; color: white;">Follow Me!</h1>
+                    </li>
+                    <li class="nav-item w-100 mb-2" style="font-size: 13px; color: rgb(192, 190, 190);">YouTube</li>
+                    <li class="nav-item w-100 mb-2" style="font-size: 13px; color: rgb(192, 190, 190);">Facebook</li>
+                </ul>
+            </div>
+            <div class="col-3 w-25">
+                <ul class="nav">
+                    <li class="nav-item w-100">
+                        <h1 style="font-size: 16px; font-weight: bold; color: white;">Customer Service</h1>
+                    </li>
+                    <li class="nav-item w-100 mb-2" style="font-size: 13px; color: rgb(192, 190, 190);">Contact Us</li>
+                    <li class="nav-item w-100 mb-2" style="font-size: 13px; color: rgb(192, 190, 190);">Promote ADS</li>
+                    <li class="nav-item w-100 mb-2" style="font-size: 13px; color: rgb(192, 190, 190);">Private Policy
+                    </li>
+                </ul>
+            </div>
+            <div class="col-3 w-25">
+                <ul class="nav">
+                    <li class="nav-item w-100">
+                        <h1 style="font-size: 16px; font-weight: bold; color: white;">Useful Information</h1>
+                    </li>
+                    <li class="nav-item w-100 mb-2" style="font-size: 13px; color: rgb(192, 190, 190);">Safety Tips</li>
+                    <li class="nav-item w-100 mb-2" style="font-size: 13px; color: rgb(192, 190, 190);">Ad Posting Rules
+                    </li>
+                    <li class="nav-item w-100 mb-2" style="font-size: 13px; color: rgb(192, 190, 190);">Disclaimer</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row p-3 mt-2" style="border-top: 1px solid rgba(0, 0, 0, 0.188);">
+            <div class="col-12 d-flex justify-content-center"><span
+                    style="font-size: 12px; font-weight: 500; color: rgba(255, 255, 255, 0.848);">Copyright ©2020
+                    TINGLOK (Cambodia). All rights reserved.</span></div>
+        </div>
+    </div>
+</body>
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+</script>
+
+<script src="/Project/script.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</html>
